@@ -1,6 +1,12 @@
 node {
-   stage 'Etapa 1'
-   		echo 'Mensaje 1'
-   stage 'Etapa 2'
-   		echo 'Mensaje 2'
+   
+   	stage 'Etapa 1'
+   		echo 'Saludo'
+   	stage 'Checkout'
+   		git url: 'https://github.com/repo/proyecto.git'
+   	stage 'Build'
+   		sh './build.sh'
+   	stage 'Deploy'
+   		sh './deployment.sh'
+  
 }
